@@ -50,5 +50,7 @@ spec:
   policyTypes:
   - Ingress
   ingress:
+  # Allow traffic only from within the same namespace
   - from:
-    - podSelector: {}  # Allows traffic only from within the same namespace
+      - namespaceSelector: {}  # Only allows traffic from within test-2 namespace
+
